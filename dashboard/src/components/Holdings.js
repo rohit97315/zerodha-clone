@@ -1,14 +1,25 @@
 import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
 import { VerticalGraph } from "./VerticalGraph";
+const API_URL = import.meta.env.VITE_API_URL;
 
 // import { holdings } from "../data/data";
 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
+
+  //old
+  // useEffect(() => {
+  //   axios.get("http://localhost:3002/allHoldings").then((res) => {
+  //     // console.log(res.data);
+  //     setAllHoldings(res.data);
+  //   });
+  // }, []);
+
+  //new
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get(`${API_URL}/allHoldings`).then((res) => {
       // console.log(res.data);
       setAllHoldings(res.data);
     });
