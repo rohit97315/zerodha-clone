@@ -17,8 +17,8 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://zerodha-clone-frontend-o7td.onrender.com/",   // Replace with your actual Frontend URL
-    "https://zerodha-clone-dasboard.onrender.com/holdings"  // Replace with your actual Dashboard URL
+    "https://zerodha-clone-frontend-o7td.onrender.com",   // Replace with your actual Frontend URL
+    "https://zerodha-clone-dasboard.onrender.com/"  // Replace with your actual Dashboard URL
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
