@@ -10,20 +10,20 @@ const Holdings = () => {
 
 
   //old
-  // useEffect(() => {
-  //   axios.get("http://localhost:3002/allHoldings").then((res) => {
-  //     // console.log(res.data);
-  //     setAllHoldings(res.data);
-  //   });
-  // }, []);
-
-  //new
   useEffect(() => {
-    axios.get(`${API_URL}/allHoldings`).then((res) => {
+    axios.get("http://localhost:3002/allHoldings").then((res) => {
       // console.log(res.data);
       setAllHoldings(res.data);
     });
   }, []);
+
+  //new
+  // useEffect(() => {
+  //   axios.get(`${API_URL}/allHoldings`).then((res) => {
+  //     // console.log(res.data);
+  //     setAllHoldings(res.data);
+  //   });
+  // }, []);
 
   // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   const labels = allHoldings.map((subArray) => subArray["name"]);
