@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
 import HomePage from './landing_page/home/HomePage';
-import SignUp from './landing_page/signup/Signup';
+import SignUpPage from './landing_page/signup/SignupPage';
 import AboutPage from './landing_page/about/AboutPage';
 import ProductsPage from './landing_page/products/ProductsPage';
 import PricingPage from './landing_page/pricing/PricingPage';
@@ -19,7 +19,7 @@ root.render(
       <Navbar/>
       <Routes>
           <Route path="/" element={<HomePage/>}></Route>
-          <Route path="/signup" element={<SignUp/>}></Route>
+          <Route path="/signup" element={<SignUpPage/>}></Route>
           <Route path="/about" element={<AboutPage/>}></Route>
           <Route path="/product" element={<ProductsPage/>}></Route>
           <Route path="/pricing" element={<PricingPage/>}></Route>
